@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block page_header %}
+  <h3>{{ object }}</h3>
+{% endblock page_header %}
+
+{% block content %}
+<h1>Detail for this post</h1>
+
+<div class="card mb-3">
+    <h4 class="card-header">
+        {{ object.date_added|date:'M d, Y H:i' }}
+        <small><a href="{% url 'post_edit' object.pk %}"> edit post</a></small>
+        <a href="{% url 'post_delete' object.pk %}">Delete</a>
+    </h4>
+    <div class="card-body">
+        <h2>{{ object.title }}</h2>
+        {{ object.text|linebreaks }}
+      </div>
+    </div>
+{% endblock content %}

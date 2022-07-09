@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block page_header %}
+<div class="jumbotron">
+    <h1 class="display-3">Get yourself a personal blog.</h1>
+    <p class="lead">Having a personal blog helps you keep journal of your daily activities which would prove vital to 
+        you as you journey through this life. This is a habit I wish I had formed earlier.</p>
+    <a class="btn btn-lg btn-primary" href="{% url 'signup' %}"
+        role="button">Sign up &raquo;</a>
+</div>
+{% endblock page_header %}
